@@ -20,13 +20,13 @@ function submitData(userName, userEmail) {
         .then(function(object) {
             let id = object.id;
             let div = document.createElement("div")
-            div.innerText = id
+            div.innerHTML = id
             document.getElementsByTagName("body")[0].appendChild(div)
         })
         .catch(function(error) {
             if (error.message) {
                 let errorNotice = document.createElement("div")
-                errorNotice.innerText = error.message
+                errorNotice.innerHTML = error.message
                 document.getElementsByTagName("body")[0].appendChild(errorNotice)
             }
         })
